@@ -1,10 +1,6 @@
 name: testing
 
-on: 
-  push:
-    branches: [ "main", "aarhone-patch-1" ]
-  schedule:
-      - cron: '45 12 * * 5'
+on: push
 
 permissions:
   contents: read
