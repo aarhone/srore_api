@@ -17,6 +17,16 @@ jobs:
       - name: hi
         run: echo "HI GHA"
 
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
   snyk:
     permissions:
       contents: read # for actions/checkout to fetch code
