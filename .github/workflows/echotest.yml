@@ -1,0 +1,11 @@
+name: test-print
+
+on: [push]
+
+jobs:
+  name: testing
+  runs-on: ubuntu-latest
+  steps:
+    name: hi
+    run: echo "HI GHA"
+      
