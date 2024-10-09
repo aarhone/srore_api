@@ -4,7 +4,8 @@ on: [push]
 
 jobs:
   testing-GHA:
-    name: testing
     runs-on: ubuntu-latest
-    steps: [name: hi, run: echo "HI GHA"]
+    steps:
+      - name: hi
+        run: echo "HI GHA"
         
